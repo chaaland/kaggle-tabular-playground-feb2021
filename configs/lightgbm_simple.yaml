@@ -1,0 +1,15 @@
+experiment:
+  meta:
+    name: linear_regression_target_encoding
+  model:
+    family: linreg
+  data_path: data
+  training:
+    seed: 5571
+    n_optuna_trials: 50
+    alpha_range: [1e-5, 1e2]
+    augmentation: [
+      {
+        name: target_encode,
+      },
+    ]
